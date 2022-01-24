@@ -1,0 +1,76 @@
+{% extends './base.html' %}
+
+{% block mainContent%}
+
+{% comment %} <div
+  class="
+    col-xl-8 col-lg-8 col-md-8
+    d-flex
+    flex-column
+    ms-auto
+    me-auto
+    ms-lg-auto
+    me-lg-8
+  "
+> {% endcomment %}
+
+{% load static%}
+<nav class="navbar navbar-expand-lg position-absolute top-0 z-index-3 w-100 shadow-none my-3  navbar-transparent ">
+    <div class="collapse navbar-collapse w-100 pt-3 pb-2 py-lg-5 ms-lg-12 ps-lg-5" id="navigation">
+    <ul class="navbar-nav navbar-nav-hover ms-auto">
+    <li class="nav-item my-auto ms-3 ms-lg-0">
+        <a href="/ad/subcategory" class="btn btn-sm  bg-gradient-primary  mb-0 me-1 mt-2 mt-md-0">Show subcat</a>
+    </li>
+    <li class="nav-item my-auto ms-3 ms-lg-0">
+      <a href="/ad/profile1" class="btn btn-sm  bg-gradient-primary  mb-0 me-1 mt-2 mt-md-0">Home</a>
+    </li>
+  </ul>
+  </div>
+  </div>
+  </nav> 
+
+<div class="card-body px-0 pb-2">
+  <div class="table-responsive p-0">
+    <table class="table align-items-center mb-0">
+    <tbody>
+      <section class="login py-5 border-top-1">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-md-8 align-item-center">
+                    <div class="border border">
+                        <h3 class="bg-gray p-2">Sub-Category Details</h3>
+                        <form action="/ad/addcat" method="POST">
+                        {% csrf_token %}
+                            <fieldset class="p-4">
+                              {% comment %} <input type="tel" name="id" placeholder="Enter Category Id" class="border p-3 w-100 my-2"> {% endcomment %}
+                              <select id="category" class="border p-3 w-100 my-2">
+                                <option value="">Select Category 
+                                </option> 
+                                {% for category in categories %}
+                                <option value="{{category.id}}">
+                                  {{category.name}}
+                                </option> 
+                                {% endfor %}
+                              </select>
+                              <input type="text" name="name" placeholder="Enter SubCategory Name" class="border p-3 w-100 my-2">
+    
+                                <textarea type="text"  name="describe" placeholder="Enter SubCategory Description" class="border p-3 w-100 my-2"></textarea>
+                                <input type="date"  name="create_date" placeholder="Enter Date" class="border p-3 w-100 my-2">
+                               
+                                
+                                <div class="loggedin-forgot d-inline-flex my-3">
+                                       
+                                        
+                                </div>
+                              <span style="color:red;font-size:18px"> {% block content  %}{{ message }}{% endblock content  %}</span>
+    
+                                <button type="submit" class="d-block py-3 px-4 bg-primary text-white border-0 rounded font-weight-bold">Submit Now</button>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {% endblock mainContent%}

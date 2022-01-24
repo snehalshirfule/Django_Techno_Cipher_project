@@ -1,0 +1,46 @@
+
+{% extends './base.html' %}
+
+{% block mainContent%}
+
+<p><a href="/ad/category" class ="btn btn-primary">Back</a></p>
+
+
+
+{% load static %}
+
+  <section class="login py-5 border-top-1">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-8 align-item-center">
+                <div class="border border">
+                    <h3 class="bg-gray p-4">Category Details</h3>
+                    <form action="/ad/addcat" method="POST">
+                    {% csrf_token %}
+                        <fieldset class="p-4">
+                            <input type="text" name="name" placeholder="Enter Category Name" class="border p-3 w-100 my-2">
+
+                            <textarea type="text"  name="describe" placeholder="Enter Category Description" class="border p-3 w-100 my-2"></textarea>
+                            <input type="date"  name="create_date" placeholder="Enter Date" class="border p-3 w-100 my-2">
+                           
+                            
+                            <div class="loggedin-forgot d-inline-flex my-3">
+                                   
+                                    
+                            </div>
+                          <span style="color:red;font-size:18px"> {% block content  %}{{ message }}{% endblock content  %}</span>
+
+                            <button type="submit" class="d-block py-3 px-4 bg-primary text-white border-0 rounded font-weight-bold">Submit Now</button>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+ <!-- END SECTION-->
+
+ {% endblock mainContent%}
+ 
+
+    
