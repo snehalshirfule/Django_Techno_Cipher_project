@@ -87,6 +87,6 @@ def signout(request):
 
 def mypackage(request):
     if 'user_id' in request.session:
-        return render(request,'vendor/mypackage.html')
+        return render(request,'vendor/package.html')
     else:
         return redirect("/vr/signin")
