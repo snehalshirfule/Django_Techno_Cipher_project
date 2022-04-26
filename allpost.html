@@ -1,0 +1,13 @@
+{% extends './base.html' %}
+
+{% block mainContent%}
+<div class="row" style="margin-left: 300px;" >
+   {% for x in img %} 
+   <div class="col-sm-4">
+    <div class="card m-2">
+     <img src="{{x.photo.url}}" alt="no-image" class="card-img-top" height="200px">
+    </div>
+   </div>
+   {% endfor %}
+</div>
+{% endblock %}
