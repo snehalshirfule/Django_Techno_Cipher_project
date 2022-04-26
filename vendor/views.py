@@ -1,7 +1,7 @@
+from tkinter import Image
 from django.shortcuts import redirect, render
-from vendor.forms import AuthForm, DashForm, Registration_Form
+from vendor.forms import AuthForm, DashForm, Registration_Form,ImageForm
 from vendor.models import VendorModel
-from django.core.exceptions import ObjectDoesNotExist
 # Create your views here.
 
 
@@ -90,3 +90,22 @@ def mypackage(request):
         return render(request,'vendor/package.html')
     else:
         return redirect("/vr/signin")
+
+
+def addpost(request):
+   if request.method == "POST":
+       form = ImageForm(request.POST, request.FILES)
+       if form.is_valid():
+        form.save()
+   form = ImageForm()
+   return render(request,'vendor/addpost.html',{'form':form})
+
+
+
+def allpost(request):
+    if request.method == "POST":
+       form = ImageForm(request.POST, request.FILES)
+       if form.is_valid():
+        form.save()
+    img = Image.objects.all()
+    return render(request,'vendor/allpost.html',{'img':img}) 
