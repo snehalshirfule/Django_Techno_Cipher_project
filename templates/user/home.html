@@ -1,51 +1,685 @@
-{% comment %} {% extends './base.html' %} {% endcomment %}
 <!DOCTYPE html>
 <html lang="en">
 {% load static %}
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="apple-touch-icon" sizes="76x76" href="{% static 'img/apple-icon.png' %}">
-  <link rel="icon" type="image/png" href="{% static 'img/favicon.png' %}">
+  <link rel="apple-touch-icon" sizes="76x76" href="{% static '/img//apple-icon.png' %}">
+  <link rel="icon" type="image/png" href="{%static '/assets/img//favicon.png' %}">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    Wedding Spot
+    WeddingSpot
   </title>
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
   <!--     Fonts and icons     -->
-  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
-  <!-- Nucleo Icons -->
-  <link href="{% static 'css/nucleo-icons.css' %}" rel="stylesheet" />
-  <link href="{% static 'css/nucleo-svg.css' %}" rel="stylesheet" />
-  <!-- Font Awesome Icons -->
-  <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
-  <!-- Material Icons -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
   <!-- CSS Files -->
-  <link id="pagestyle" href="{% static 'css/material-dashboard.css' %}" rel="stylesheet" />
+  <link href="{%static '/css1/bootstrap.min.css' %}" rel="stylesheet" />
+  <link href="{%static '/css1/paper-kit.css' %}" rel="stylesheet" />
+  <!-- CSS Just for demo purpose, don't include it in your project -->
+  <link href="{%static '/demo/demo.css" rel="stylesheet' %}" />
 </head>
-{% block title%} User Dashboard {%endblock title%}
-{% block mainContent%}
-{% endblock mainContent%}
-<h1> USER HOME PAge </h1>
-      <!--   Core JS Files   -->
-      <script src="{%static 'js/core/popper.min.js' %}"></script>
-      <script src="{%static 'js/core/bootstrap.min.js' %}"></script>
-      <script src="{%static 'js/plugins/perfect-scrollbar.min.js' %}"></script>
-      <script src="{%static 'js/plugins/smooth-scrollbar.min.js' %}"></script>
-      <script>
-        var win = navigator.platform.indexOf('Win') > -1;
-        if (win && document.querySelector('#sidenav-scrollbar')) {
-          var options = {
-            damping: '0.5'
-          }
-          Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
-        }
-        alert("You are loged in successfully!");
+
+<body class="index-page sidebar-collapse">
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg fixed-top  " color-on-scroll="300">
+  <div class="container">
+    <div class="navbar-translate">
+      <a class="navbar-brand" href="#" rel="tooltip" title="Coded by Creative Tim" data-placement="bottom" target="_blank">
+        WeddingSpot
+      </a>
+      <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-bar bar1"></span>
+        <span class="navbar-toggler-bar bar2"></span>
+        <span class="navbar-toggler-bar bar3"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse justify-content-end" id="navigation">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" rel="tooltip" data-placement="bottom" href="#" target="_blank">
+            HOME
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" rel="tooltip"  data-placement="bottom" href="/us/about" target="_blank">
+            About Us
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" rel="tooltip" title="Follow us on Instagram" data-placement="bottom" href="#" target="_blank">
+          Contact Us
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" rel="tooltip" title="Star on GitHub" data-placement="bottom" href="#" target="_blank">
+            Gallary
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="/us/signin" target="_blank" class="btn btn-danger btn-round">SignIn</a>
+        </li>
+        <li class="nav-item">
+          <button href="#" target="_blank" class="dropdown-toggle btn btn-danger btn-round" data-toggle="dropdown">Register Here</button>
+          <ul class="dropdown-menu dropdown-menu-right">
+            <li><a href="/vr/signup" target="_blank" class="nav-menu">As Vendor</a></li>
+            <li><a href="/us/signup" target="_blank" class="nav-menu">As User</a></li></ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- End Navbar -->
+
+<div class="title">        
+      </div>
+    </div>
+  </div>
+<div id="carousel">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12 ml-2 mr-2">
+          <div class="card page-carousel">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="7"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="8"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="9"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="10"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="11"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="12"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="13"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="14"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="15"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="16"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="17"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="18"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="19"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="20"></li>
+              </ol>
+              <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active">
+                  <img class="d-block img-fluid" src="{%static '/img/index/1.jpg' %}" alt="First slide">
+                  <div class="carousel-caption d-none d-md-block">
+                    <p style="font-family: italic; font-size:50px;">EveRy TimE I SEe YoU, I Fall In LoVe All OvEr AgAiN</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block img-fluid" src="{%static '/img/index/d6.jpg' %}" alt="Second slide">
+                  <div class="carousel-caption d-none d-md-block">
+                    <p style="font-family: italic; font-size:50px; ">This Is BeAuTiFul StArT To A LiFeLoNg LoVe LeTTer..</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block img-fluid" src="{%static '/img/index/c1.jpg' %}" alt="Third slide">
+                  <div class="carousel-caption d-none d-md-block">
+                    <p style="font-family: italic; font-size:50px; ">I NeveR WaNt To StoP MaKinG MemoRieS WitH You</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block img-fluid" src="{%static '/img/index/ft.jpg' %}" alt="Second slide">
+                  <div class="carousel-caption d-none d-md-block">
+                    <p style="font-family: italic; font-size:50px;">* ThIs WaY To * LoVe LaUgHtEr AnD hAppIly EvEr AfTer In OtHeR WoRdS.</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block img-fluid" src="{%static '/img/index/p2.jpg' %}" alt="Second slide">
+                  <div class="carousel-caption d-none d-md-block">
+                    <p style="font-family: italic; font-size:50px;">I'm HaPpiest When I'm Right To YoU..</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block img-fluid" src="{%static '/img/index/d2.jpg' %}" alt="Second slide">
+                  <div class="carousel-caption d-none d-md-block">
+                    <p style="font-family: italic; font-size:50px;">WhEn YeS MeAnS FoReVeR..</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block img-fluid" src="{%static '/img/index/p7.jpg' %}" alt="Second slide">
+                  <div class="carousel-caption d-none d-md-block">
+                    <p style="font-family: italic; font-size:50px;">Be WiTh SoMeOnE WhO IS ProuD To HaVE YoU!!</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block img-fluid" src="{%static '/img/index/d13.jpg' %}" alt="Second slide">
+                  <div class="carousel-caption d-none d-md-block">
+                    <p style="font-family: italic; font-size:50px;">MaRRigE An EnDlEss SlEepOvEr WiTh YoUR FaVoRIte WeIrDo.</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block img-fluid" src="{%static '/img/index/9.jpg' %}" alt="Second slide">
+                  <div class="carousel-caption d-none d-md-block">
+                    <p style="font-family: italic; font-size:50px;">Your Voice Is My Favorite Sound!!</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block img-fluid" src="{%static '/img/index/d1.jpg' %}" alt="Second slide">
+                  <div class="carousel-caption d-none d-md-block">
+                    <p style="font-family: italic; font-size:50px;">TO Have AnD To HOld.</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block img-fluid" src="{%static '/img/index/p6.jpg' %}" alt="Second slide">
+                  <div class="carousel-caption d-none d-md-block">
+                    <p style="font-family: italic; font-size:50px;">I LoOk At YoU AnD SeE ThE ReSt Of My LiFe In FrOnT Of My EyEs..</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block img-fluid" src="{%static '/img/index/d9.jpg' %}" alt="Second slide">
+                  <div class="carousel-caption d-none d-md-block">
+                    <p style="font-family: italic; font-size:50px;">AnD So ToGeThEr ThEy BuIlT A LiFe ThEy LoVED..</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block img-fluid" src="{%static '/img/index/h7.jpg' %}" alt="Second slide">
+                  <div class="carousel-caption d-none d-md-block">
+                    <p style="font-family: italic; font-size:50px;">ReAl LoVe NeVeR AsKs A ReAsOn FoR LoViNg..</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block img-fluid" src="{%static '/img/index/6.jpg' %}" alt="Second slide">
+                  <div class="carousel-caption d-none d-md-block">
+                    <p style="font-family: italic; font-size:50px;">NotHin FaNcY JuST LoVE..</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block img-fluid" src="{%static '/img/index/h6.jpg' %}" alt="Second slide">
+                  <div class="carousel-caption d-none d-md-block">
+                    <p style="font-family: italic; font-size:50px;">ThE GooD ThInGs In LiFe ArE BeTTeR WiTh YoU!!!</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block img-fluid" src="{%static '/img/index/d12.jpg' %}" alt="Second slide">
+                  <div class="carousel-caption d-none d-md-block">
+                    <p style="font-family: italic; font-size:50px;">EvERy LoVE StOrY Is BeAuTiFul..</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block img-fluid" src="{%static '/img/index/2.jpg' %}" alt="Second slide">
+                  <div class="carousel-caption d-none d-md-block">
+                    <p style="font-family: italic; font-size:50px;">I Will LoVe YoU TilL The EnD Of TiMe!</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block img-fluid" src="{%static '/img/index/d11.jpg' %}" alt="Second slide">
+                  <div class="carousel-caption d-none d-md-block">
+                    <p style="font-family: italic; font-size:50px;">I HAve FOUnd ThE OnE WHom My SOul LoVEs.</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block img-fluid" src="{%static '/img/index/3.jpg' %}" alt="Second slide">
+                  <div class="carousel-caption d-none d-md-block">
+                    <p style="font-family: italic; font-size:50px;">YoU WiLl FoReVeR Be My AlWaYs..</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block img-fluid" src="{%static '/img/index/8.jpg' %}" alt="Second slide">
+                  <div class="carousel-caption d-none d-md-block">
+                    <p style="font-family: italic; font-size:50px;">GrOW OLd AloNG WitH Me ThE BeSt IS YeT To Be..</p>
+                  </div>
+                </div>
+              </div>
+              <a class="left carousel-control carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="fa fa-angle-left"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="right carousel-control carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="fa fa-angle-right"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+
+      
+   
     
-      </script>
-      <!-- Github buttons -->
-      <script async defer src="https://buttons.github.io/buttons.js"></script>
-      <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
-      <script src="{%static 'js/material-dashboard.min.js' %}"></script>
+    
+    <!--Make sure the form has the autocomplete function switched off:-->
+    {% comment %} <form role="form" action="">
+      <div class="input-group-outline mb-3" style="width:600px;">
+        <input id="myInput" class="form-control" type="text" name="myCountry" placeholder="Country">
+      </div>
+      <div class="" style="display:inline" >
+        <select name="categorytb" class="border p-3 w-50 my-2">
+          <option value="">Select Category 
+          </option> 
+          {% for category in categories %}
+          <option value="{{category.id}}">
+            {{category.name}}
+          </option> 
+          {% endfor %}
+        </select> </div>
+        
+     
+       <div class="" style="width:600px;">
+      <input type="submit" class="btn bg-gradient-primary w-100 my-4 mb-2">
+      </div>
+       <div class="text right">
+      <button class="btn btn-block u-btn-primary u-btn-pink u-btn-hover-v2-2
+      g-c...y-dark-v1--hover g-font-weight-600 rounded-0 g-px-18 g-py-15"
+      type="submit">Search</button>
+    </form>
+    {% endcomment %}
+    
+  
+
+{% comment %} <div class="g-bg-white g-pa-30">
+  <div class="text-danger">
+  </div>
+  <form name="search" method="post" action="">
+    <div class="row g-mx-0--md">
+      <div class="col-md-8 col-lg-8 g-px-0--md g-mb-30">
+        <input id="" class="form-control rounded-0 g-brd-gray-light-v3 g-px-20-gpy15 autocomplete"
+        autocomplete="off" type="text" name="mycountry" placeholder="search by city" required="">
+      </div>
+
+      <!--Id = "Search text field" button group-->
+      <div class="col-sm-6 col-md-4 col-lg-4 g-px-0--md g-mb-30">
+       <select class="form-control form-control-md rounded-0 
+       form-control-lg w-100...light-v3 g-color-main g-color-primary--hover
+       g-pt-12 g-pb-13" name="category" required=" " data-placeholder="all category">
+       <option class="g-brd-none g-color-main g-color-white--hover g-color-white--active
+       g-bg-primary--hover g-bg-primary--active" value=" ">select category</option>
+       <option class="g-brd-none g-color-main g-color-white--hover g-color-white--active 
+       g-bg-primary--hover g-bg-primary--active" value="2">Ballon Decoration</option>
+      </select>
+    </div>
+    <div class="text right">
+      <button class="btn btn-block u-btn-primary u-btn-pink u-btn-hover-v2-2
+      g-c...y-dark-v1--hover g-font-weight-600 rounded-0 g-px-18 g-py-15"
+      type="submit">Search</button>
+    </div>
+  </form>
+</div>
+</div>  {% endcomment %}
+
+{% comment %} <div class="row g-mb-30">
+  <div class="col-lg-4 g-mb-40 g-mb-0--lg">
+    <ul class="list-unstyled mb-0">
+      <li class="media u-shadow-v11 rounded g-pa-20 g-mb-10">
+        <article>
+          <figure class="g-pos-rel">
+            <img class="img-fluid w-100 g-mb-0" alt="img" src="img/f.jpg" >
+            <figcaption class="g-pos-abs g-bottom-20 g-left-60" style=" width:166px; ">
+              <a class="btn btn-sm u-btn-red rounded-0 g-py-400" href="javascript:void();" style="color:#fff; 
+              background-color:#CD1347; font-weight:900; font-size:18px; text-shadow: 2px 2px 1px #3a3a3a;">Caterers</a>
+            </figcaption>
+          </figure>
+        </article>
+      </li>
+      <li class="media u-shadow-v11 rounded g-pa-20 g-mb-10">
+        <article>
+          <figure class="g-pos-rel">
+            <img class="img-fluid w-100 g-mb-0" alt="img" src="img/f.jpg" style="max-height:170px;">
+            <figcaption class="g-pos-abs g-bottom-20 g-left-60" style="/*! width:166px; */">
+              <a class="btn btn-sm u-btn-red rounded-0 g-py-400" href="javascript:void();" style="color:#fff; 
+              background-color:#CD1347; font-weight:900; font-size:18px; text-shadow: 2px 2px 1px #3a3a3a;">Caterers</a>
+            </figcaption>
+          </figure>
+        </article>
+      </li> {% endcomment %}
 
 
+    
+<section class="search-sec" style="padding: 2rem;">
+        <div class="container-fluid">
+            <form action="#" method="post" novalidate="novalidate">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-sm-12 p-0">
+                                <input type="text" name="myCountry" id="myInput" class="form-control search-slt" placeholder="Enter City" style=" display: block;
+                                width: 100%;
+                                font-size:15px;
+                                font-style:Serif;
+                                line-height: 1.5;
+                                color: #55595c;
+                                background-color: #fff;
+                                background-image: none;
+                                border: 1px solid #ccc;
+                                height: calc(3rem + 2px) !important;
+                                border-radius:0;">
+                            </div>
+                           
+                            <div class="col-lg-5 col-md-5 col-sm-12 p-0">
+                                <select class="form-control search-slt" id="exampleFormControlSelect1" style=" display: block;
+                                width: 100%;
+                                font-size:15px;
+                                font-style:Serif;
+                                line-height: 1.5;
+                                color: #55595c;
+                                background-color: #fff;
+                                background-image: none;
+                                border: 1px solid #ccc;
+                                height: calc(3rem + 2px) !important;
+                                border-radius:0;" name="categorytb">
+                                    <option>Select Category</option>
+                                    <option>Decoration</option>
+                                    <option>Caterers</option>
+                                    <option>MakeUp Artist</option>
+                                    <option>Mehendi</option>
+                                    <option>Stage</option>
+                                    <option>Photographers</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                                <button type="button" class="btn btn-danger wrn-btn" style=" width: 100%;
+                                font-size: 16px;
+                                font-weight: 400;
+                                text-transform: capitalize;
+                                height: calc(3rem + 2px) !important;
+                                border-radius:0; background: #CD1347">Search</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+ <br>
+ <br>
+ <br>
 
+<div class="container g-py-15">
+<div class="container">
+  <header class="text-center g-width-60x--md mx-auto g-mb-50">
+    <p id="demo"></p>
+    <h2 class="h1 g-color-gray-dark-v1 g-font-weight-300">List Of Our Category</h2>
+    <p class="lead">
+      Weddingspot Give You An Option To Explore 30+ categories
+      On A Single Platform from
+
+      <span style="font-family:Elephant; font-style:italic; color:black;">A </span>
+      to
+      <span style="font-family:Arial Black; font-style:italic; color:black;">Z</span>
+    </p>
+  </header>
+</div>
+</div>
+<br>
+<br>
+
+
+<section class="text" style="padding: 2rem;">
+      <div id="images">
+        <div class="container">          
+          <div class="row">
+            <div class="col-sm-6 col-md-3">
+              <img src="{% static '/img/caterers.jpg' %}" class="img-rounded img-responsive" alt="Rounded Image">
+              <div class="img-details">
+                <div class="author">
+                  <figcaption class="g-pos-abs g-bottom-20 g-left-60" style="/*! width:166px; */">
+                  <a class="btn btn-sm u-btn-red rounded-0 g-py-400" href="#" style="color:#fff; 
+              background-color:#CD1347; font-weight:200; font-size:10px; text-shadow: 1px 1px 1px #3a3a3a;">Caterers</a>
+            </figcaption>
+                 
+                </div>
+               </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+              <img src="{% static '/img/dance.jpg' %}" class="img-rounded img-responsive" alt="Rounded Image">
+              <div class="img-details">
+                <div class="author">
+                  <figcaption class="g-pos-abs g-bottom-20 g-left-60" style="/*! width:166px; */">
+                  <a class="btn btn-sm u-btn-red rounded-0 g-py-400" href="#" style="color:#fff; 
+              background-color:#CD1347; font-weight:200; font-size:10px; text-shadow: 1px 1px 1px #3a3a3a;">Dancers</a>
+            </figcaption>
+                 
+                </div>
+               </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+              <img src="{% static '/img/mehendi.jpg' %}" class="img-rounded img-responsive" alt="Rounded Image">
+              <div class="img-details">
+                <div class="author">
+                  <figcaption class="g-pos-abs g-bottom-20 g-left-60" style="/*! width:166px; */">
+                  <a class="btn btn-sm u-btn-red rounded-0 g-py-400" href="#" style="color:#fff; 
+              background-color:#CD1347; font-weight:200; font-size:10px; text-shadow: 1px 1px 1px #3a3a3a;">Mehendi</a>
+            </figcaption>
+                 
+                </div>
+               </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+              <img src="{% static '/img/ballon.jpg' %}" class="img-rounded img-responsive" alt="Rounded Image">
+              <div class="img-details">
+                <div class="author">
+                  <figcaption class="g-pos-abs g-bottom-20 g-left-60" style="/*! width:166px; */">
+                  <a class="btn btn-sm u-btn-red rounded-0 g-py-400" href="#" style="color:#fff; 
+              background-color:#CD1347; font-weight:200; font-size:10px; text-shadow: 1px 1px 1px #3a3a3a;">Decorators</a>
+            </figcaption>
+                  </div>                  
+               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="text" style="padding: 2rem;">
+      <div id="images">
+        <div class="container">          
+          <div class="row">
+            <div class="col-sm-6 col-md-3">
+              <img src="{% static '/img/baby shower.jpg' %}" class="img-rounded img-responsive" alt="Rounded Image">
+              <div class="img-details">
+                <div class="author">
+                  <figcaption class="g-pos-abs g-bottom-20 g-left-60" style="/*! width:166px; */">
+                  <a class="btn btn-sm u-btn-red rounded-0 g-py-400" href="#" style="color:#fff; 
+              background-color:#CD1347; font-weight:200; font-size:10px; text-shadow: 1px 1px 1px #3a3a3a;">Baby Shower</a>
+            </figcaption>
+                 
+                </div>
+               </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+              <img src="{% static '/img/bridemakeup.jpg' %}" class="img-rounded img-responsive" alt="Rounded Image">
+              <div class="img-details">
+                <div class="author">
+                  <figcaption class="g-pos-abs g-bottom-20 g-left-60" style="/*! width:166px; */">
+                  <a class="btn btn-sm u-btn-red rounded-0 g-py-400" href="#" style="color:#fff; 
+              background-color:#CD1347; font-weight:200; font-size:10px; text-shadow: 1px 1px 1px #3a3a3a;">MakeUp</a>
+            </figcaption>
+                 
+                </div>
+               </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+              <img src="{% static '/img/light.jpg' %}" class="img-rounded img-responsive" alt="Rounded Image">
+              <div class="img-details">
+                <div class="author">
+                  <figcaption class="g-pos-abs g-bottom-20 g-left-60" style="/*! width:166px; */">
+                  <a class="btn btn-sm u-btn-red rounded-0 g-py-400" href="#" style="color:#fff; 
+              background-color:#CD1347; font-weight:200; font-size:10px; text-shadow: 1px 1px 1px #3a3a3a;">Light</a>
+            </figcaption>
+                 
+                </div>
+               </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+              <img src="{% static '/img/photo.jpg' %}" class="img-rounded img-responsive" alt="R">
+              <div class="img-details">
+                <div class="author">
+                  <figcaption class="g-pos-abs g-bottom-20 g-left-60" style="/*! width:166px; */">
+                  <a class="btn btn-sm u-btn-red rounded-0 g-py-400" href="#" style="color:#fff; 
+              background-color:#CD1347; font-weight:200; font-size:10px; text-shadow: 1px 1px 1px #3a3a3a;">Decorators</a>
+            </figcaption>
+                  </div>                  
+               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  
+
+
+<!--Footer start-->
+<footer class="footer-demo section-dark">
+  <div class="container">
+      <nav class="pull-left">
+        <a href="#">
+                      Creative Tim
+                  </a>
+            
+        <a href="#">
+                     Blog
+                  </a>
+        <a href="#">
+                      Licenses
+                  </a>
+        </nav>
+      <div class="copyright pull-right">
+          &copy; 2015, made with <i class="fa fa-heart heart"></i> by Creative Tim
+      </div>
+  </div>
+</footer>
+</div>
+            
+
+<script>
+  function autocomplete(inp, arr) {
+    /*the autocomplete function takes two arguments,
+    the text field element and an array of possible autocompleted values:*/
+    var currentFocus;
+    /*execute a function when someone writes in the text field:*/
+    inp.addEventListener("input", function(e) {
+        var a, b, i, val = this.value;
+        /*close any already open lists of autocompleted values*/
+        closeAllLists();
+        if (!val) { return false;}
+        currentFocus = -1;
+        /*create a DIV element that will contain the items (values):*/
+        a = document.createElement("DIV");
+        a.setAttribute("id", this.id + "autocomplete-list");
+        a.setAttribute("class", "autocomplete-items");
+        /*append the DIV element as a child of the autocomplete container:*/
+        this.parentNode.appendChild(a);
+        /*for each item in the array...*/
+        for (i = 0; i < arr.length; i++) {
+          /*check if the item starts with the same letters as the text field value:*/
+          if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+            /*create a DIV element for each matching element:*/
+            b = document.createElement("DIV");
+            /*make the matching letters bold:*/
+            b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+            b.innerHTML += arr[i].substr(val.length);
+            /*insert a input field that will hold the current array item's value:*/
+            b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+            /*execute a function when someone clicks on the item value (DIV element):*/
+            b.addEventListener("click", function(e) {
+                /*insert the value for the autocomplete text field:*/
+                inp.value = this.getElementsByTagName("input")[0].value;
+                /*close the list of autocompleted values,
+                (or any other open lists of autocompleted values:*/
+                closeAllLists();
+            });
+            a.appendChild(b);
+          }
+        }
+    });
+    /*execute a function presses a key on the keyboard:*/
+    inp.addEventListener("keydown", function(e) {
+        var x = document.getElementById(this.id + "autocomplete-list");
+        if (x) x = x.getElementsByTagName("div");
+        if (e.keyCode == 40) {
+          /*If the arrow DOWN key is pressed,
+          increase the currentFocus variable:*/
+          currentFocus++;
+          /*and and make the current item more visible:*/
+          addActive(x);
+        } else if (e.keyCode == 38) { //up
+          /*If the arrow UP key is pressed,
+          decrease the currentFocus variable:*/
+          currentFocus--;
+          /*and and make the current item more visible:*/
+          addActive(x);
+        } else if (e.keyCode == 13) {
+          /*If the ENTER key is pressed, prevent the form from being submitted,*/
+          e.preventDefault();
+          if (currentFocus > -1) {
+            /*and simulate a click on the "active" item:*/
+            if (x) x[currentFocus].click();
+          }
+        }
+    });
+    function addActive(x) {
+      /*a function to classify an item as "active":*/
+      if (!x) return false;
+      /*start by removing the "active" class on all items:*/
+      removeActive(x);
+      if (currentFocus >= x.length) currentFocus = 0;
+      if (currentFocus < 0) currentFocus = (x.length - 1);
+      /*add class "autocomplete-active":*/
+      x[currentFocus].classList.add("autocomplete-active");
+    }
+    function removeActive(x) {
+      /*a function to remove the "active" class from all autocomplete items:*/
+      for (var i = 0; i < x.length; i++) {
+        x[i].classList.remove("autocomplete-active");
+      }
+    }
+    function closeAllLists(elmnt) {
+      /*close all autocomplete lists in the document,
+      except the one passed as an argument:*/
+      var x = document.getElementsByClassName("autocomplete-items");
+      for (var i = 0; i < x.length; i++) {
+        if (elmnt != x[i] && elmnt != inp) {
+          x[i].parentNode.removeChild(x[i]);
+        }
+      }
+    }
+    /*execute a function when someone clicks in the document:*/
+    document.addEventListener("click", function (e) {
+        closeAllLists(e.target);
+    });
+  }
+
+
+  let cities = [
+  "Ahmednagar","Akola","Amravati","Aurangabad",
+  "Beed","Bhandara","Buldhana","Chandrapur",
+  "Dhule","Gadchiroli","Gondia","Hingoli","Jalgaon",
+  "Jalna","Kolhapur","Latur","Mumbai City",
+  "Mumbai Suburban","Nagpur","Nanded","Nandurbar",
+  "Nashik","Osmanabad","Palghar","Parbhani",
+  "Pune","Raigad","Ratnagiri","Sangli",
+  "Satara","Sindhudurg","Solapur","Thane",
+  "Wardha","Washim","Yavatmal"
+  ];
+  autocomplete(document.getElementById("myInput"), cities);
+
+</script>
+
+   <!--   Core JS Files   -->
+   <script src="{%static '/js1/core/jquery.min.js' %}" type="text/javascript"></script>
+   <script src="{%static '/js1/core/popper.min.js' %}" type="text/javascript"></script>
+   <script src="{%static '/js1/core/bootstrap.min.js' %}" type="text/javascript"></script>
+   <!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
+   <script src="{%static '/js1/plugins/bootstrap-switch.js' %}"></script>
+   <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+   <script src="{%static '/js1/plugins/nouislider.min.js' %}" type="text/javascript"></script>
+   <!--  Plugin for the DatePicker, full documentation here: https://github.com/uxsolutions/bootstrap-datepicker -->
+   <script src="{%static '/js1/plugins/moment.min.js' %}"></script>
+   <script src="{%static '/js1/plugins/bootstrap-datepicker.js' %}" type="text/javascript"></script>
+   <!-- Control Center for Paper Kit: parallax effects, scripts for the example pages etc -->
+   <script src="{%static '/js1/paper-kit.js' %}" type="text/javascript"></script>
+   <!--  Google Maps Plugin    -->
+   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+
+
+</body>
+</html>
